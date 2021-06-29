@@ -4,6 +4,7 @@
   "description": "ReactJs Node version jQuery SlickNav plugin ",
   "author": "Ravi Kiran Lingam",
   "main": "dist/js/Slicknav.js",
+  "licenses": ["MIT"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:uncompressed": "webpack --mode production --config webpack.config.js --progress --colors && node-sass src/sass/slicknav.scss dist/css/slicknav.css",
