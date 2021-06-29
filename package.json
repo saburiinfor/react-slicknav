@@ -4,12 +4,11 @@
   "description": "ReactJs Node version jQuery SlickNav plugin ",
   "author": "Ravi Kiran Lingam",
   "main": "dist/js/Slicknav.js",
-  "licenses": ["MIT"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:uncompressed": "webpack --mode production --config webpack.config.js --progress --colors && node-sass src/sass/slicknav.scss dist/css/slicknav.css",
-    "build:minified": "webpack --mode production --config webpack.config.js --progress --colors --minified && node-sass src/sass/slicknav.scss dist/css/slicknav.css",
-    "build": "npm run build:minified"
+    "build:uncompressed": "node-sass src/sass/slicknav.scss dist/css/slicknav.css && cp components/slicknav.jsx dist/js/Slicknav.js",
+    "build:minified": "webpack --mode production --progress --colors && node-sass src/sass/slicknav.scss dist/css/slicknav.css",
+    "build": "npm run build:uncompressed"
   },
   "keywords": [
     "react",
@@ -18,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/saburiinfor/node-slicknav.git"
+    "url": "https://github.com/saburiinfor/react-slicknav.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

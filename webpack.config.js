@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 var config = {
-  mode: "development",
+  mode: "production",
   entry: {
     Slicknav: './components/slicknav.jsx'
   },
@@ -12,26 +12,6 @@ var config = {
   output: {
     path: path.join(__dirname, "dist/js/"),
     filename: "[name].js"
-  },
-  externals: {
-    'react': {
-      root: 'React',
-      commonjs2: 'react',
-      commonjs: 'react',
-      amd: 'react'
-    },
-    'react-dom': {
-      root: 'ReactDOM',
-      commonjs2: 'react-dom',
-      commonjs: 'react-dom',
-      amd: 'react-dom'
-    },
-    'prop-types': {
-      root: 'PropTypes',
-      commonjs2: 'prop-types',
-      commonjs: 'prop-types',
-      amd: 'prop-types'
-    },
   },
   optimization: {
     minimize: false
